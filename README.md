@@ -6,7 +6,7 @@ A simple java chat application
 > client programs to join.
 
 <p align="center">
-  <a href="https://raw.githubusercontent.com/Drakirus/java-chat/master/screen.png">
-    <img alt="ScreenShot~ prompt" src="https://raw.githubusercontent.com/Drakirus/java-chat/master/screen.png">
+  <a href="https://raw.githubusercontent.com/jenkicat/java-chat/master/image.png">
+    <img alt="ScreenShot~ prompt" src="https://raw.githubusercontent.com/jenkicat/java-chat/master/image.png">
   </a>
 </p>

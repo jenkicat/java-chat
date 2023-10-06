@@ -43,7 +43,7 @@ public class ClientGui extends Thread{
     jfr.setResizable(false);
     jfr.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-    // Module du fil de discussion
+    // Discussion thread module
     jtextFilDiscu.setBounds(25, 25, 490, 320);
     jtextFilDiscu.setFont(font);
     jtextFilDiscu.setMargin(new Insets(6, 6, 6, 6));
@@ -54,7 +54,7 @@ public class ClientGui extends Thread{
     jtextFilDiscu.setContentType("text/html");
     jtextFilDiscu.putClientProperty(JEditorPane.HONOR_DISPLAY_PROPERTIES, true);
 
-    // Module de la liste des utilisateurs
+    // User List Module
     jtextListUsers.setBounds(520, 25, 156, 320);
     jtextListUsers.setEditable(true);
     jtextListUsers.setFont(font);
@@ -123,18 +123,18 @@ public class ClientGui extends Thread{
     jtfport.getDocument().addDocumentListener(new TextListener(jtfName, jtfport, jtfAddr, jcbtn));
     jtfAddr.getDocument().addDocumentListener(new TextListener(jtfName, jtfport, jtfAddr, jcbtn));
 
-    // position des Modules
+    // position of Modules
     jcbtn.setFont(font);
     jtfAddr.setBounds(25, 380, 135, 40);
     jtfName.setBounds(375, 380, 135, 40);
     jtfport.setBounds(200, 380, 135, 40);
     jcbtn.setBounds(575, 380, 100, 40);
 
-    // couleur par defaut des Modules fil de discussion et liste des utilisateurs
+    // default color of discussion thread and user list Modules
     jtextFilDiscu.setBackground(Color.LIGHT_GRAY);
     jtextListUsers.setBackground(Color.LIGHT_GRAY);
 
-    // ajout des éléments
+    // adding elements
     jfr.add(jcbtn);
     jfr.add(jtextFilDiscuSP);
     jfr.add(jsplistuser);
@@ -144,13 +144,13 @@ public class ClientGui extends Thread{
     jfr.setVisible(true);
 
 
-    // info sur le Chat
-    appendToPane(jtextFilDiscu, "<h4>Les commandes possibles dans le chat sont:</h4>"
+    // info on the Chat
+    appendToPane(jtextFilDiscu, "<h4>possible commands in chat are:</h4>"
         +"<ul>"
-        +"<li><b>@nickname</b> pour envoyer un Message privé à l'utilisateur 'nickname'</li>"
-        +"<li><b>#d3961b</b> pour changer la couleur de son pseudo au code hexadécimal indiquer</li>"
-        +"<li><b>;)</b> quelques smileys sont implémentés</li>"
-        +"<li><b>flèche du haut</b> pour reprendre le dernier message tapé</li>"
+        +"<li><b>@nickname</b> to send a private message to user 'nickname'</li>"
+        +"<li><b>#d3961b</b> to change the color of your nickname to the hexadecimal code indicate</li>"
+        +"<li><b>;)</b> some smileys are implemented</li>"
+        +"<li><b>top arrow</b> to resume the last typed message</li>"
         +"</ul><br/>");
 
     // On connect
@@ -196,7 +196,7 @@ public class ClientGui extends Thread{
 
     });
 
-    // on deco
+    // on disconnect
     jsbtndeco.addActionListener(new ActionListener()  {
       public void actionPerformed(ActionEvent ae) {
         jfr.add(jtfName);
@@ -258,7 +258,7 @@ public class ClientGui extends Thread{
 
   }
 
-  // envoi des messages
+  // sending messages
   public void sendMessage() {
     try {
       String message = jtextInputChat.getText().trim();
